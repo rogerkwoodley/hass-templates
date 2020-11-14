@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Containers>
+<Container version="2">
   <Date>2020-11-14</Date>
   <Beta>False</Beta>
   <Name>Ring Alarm</Name>
@@ -122,4 +122,4 @@
     <Banner></Banner>
     <WebUI>http://[IP]:[PORT:55123]</WebUI>
   <Icon>https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Ring_logo.svg/1200px-Ring_logo.svg.png</Icon>
-</Containers>
+</Container>
