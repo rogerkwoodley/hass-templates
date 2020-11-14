@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Date>2020-11-14</Date>
+  <Beta>False</Beta>
+  <Name>Ring Alarm</Name>
+  <Project>https://github.com/tsightler/ring-mqtt</Project>
+  <Overview>
+    
+  </Overview>
+  <Description>
+    
+  </Description>
+  <Registry>https://hub.docker.com/r/tsightler/ring-mqtt</Registry>
+  <GitHub>https://github.com/tsightler/ring-mqtt</GitHub>
+  <Repository>tsightler/ring-mqtt</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Environment/>
+  <Config 
+       Type="Variable" 
+       Name="Ring Token" 
+       Target="RINGTOKEN" 
+       Default="" 
+       Description="The refresh token received after authenticating with 2FA, see Authentication section for details" 
+       Mask="false" 
+       Display="always" 
+       Required="true">Ring Token</Config>
+    <Config 
+       Type="Variable" 
+       Name="MQTT Host" 
+       Target="MQTTHOST" 
+       Default="localhost" 
+       Description="Hostname for MQTT broker" 
+       Mask="false" 
+       Display="always" 
+       Required="true">MQTT Host</Config>
+    <Config 
+       Type="Variable" 
+       Name="MQTT Port" 
+       Target="MQTTPORT" 
+       Default="1883" 
+       Description="Port for MQTT broker" 
+       Mask="false" 
+       Display="always" 
+       Required="true">MQTT Port</Config>
+    <Config 
+       Type="Variable" 
+       Name="MQTT User" 
+       Target="MQTTUSER" 
+       Default="" 
+       Description="Username for MQTT broker" 
+       Mask="false" 
+       Display="always" 
+       Required="true">MQTT User</Config>
+    <Config 
+       Type="Variable" 
+       Name="MQTT Password" 
+       Target="MQTTPASSWORD" 
+       Default="" 
+       Description="Password for MQTT broker" 
+       Mask="true" 
+       Display="always" 
+       Required="true">MQTT Password</Config>
+    <Config 
+       Type="Variable" 
+       Name="Enable Cameras" 
+       Target="ENABLECAMERAS" 
+       Default="false" 
+       Description="Enable camera support, otherwise only alarm devices will be discovered" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Enable Cameras</Config>
+<Config 
+       Type="Variable" 
+       Name="Enable Modes" 
+       Target="ENABLEMODES" 
+       Default="false" 
+       Description="Enable support for Location Modes for sites without a Ring Alarm Panel" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Enable Modes</Config>
+       <Config 
+       Type="Variable" 
+       Name="Enable Panic" 
+       Target="ENABLEPANIC" 
+       Default="false" 
+       Description="Enable panic buttons on Alarm Control Panel device" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Enable Panic</Config>
+       <Config 
+       Type="Variable" 
+       Name="Enable Volume" 
+       Target="ENABLEVOLUME" 
+       Default="false" 
+       Description="Enable volume control on Keypads and Base Station" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Enable Volume</Config>
+       <Config 
+       Type="Variable" 
+       Name="Ring Location IDs" 
+       Target="RINGLOCATIONIDS" 
+       Default="" 
+       Description="Array of location IDs in format: ""loc-id"",""loc-id2""" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Ring Location IDs</Config>
+<Config 
+       Type="Variable" 
+       Name="Github branch" 
+       Target="BRANCH" 
+       Default="" 
+       Description="During startup pull latest master/dev branch from Github instead of running local copy" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Branch</Config>
+    <Banner></Banner>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Ring_logo.svg/1200px-Ring_logo.svg.png</Icon>
+</Containers>
