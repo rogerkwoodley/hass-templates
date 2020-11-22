@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Date>2020-11-22</Date>
+  <Beta>False</Beta>
+  <Name>Falcon Player</Name>
+  <Project>https://github.com/FalconChristmas/fpp</Project>
+  <Overview>
+    
+  </Overview>
+  <Description>
+    
+  </Description>
+  <Registry>https://hub.docker.com/r/falconchristmas/fpp</Registry>
+  <GitHub>https://github.com/FalconChristmas/fpp</GitHub>
+  <Repository>falconchristmas/fpp</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Port>
+        <HostPort>8456</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    <Publish/>
+  </Networking>
+  <Environment/>
+  <Config 
+       Type="Path" 
+       Name="Settings Directory" 
+       Target="/home/fpp/media/settings" 
+       Default="/mnt/user/appdata/fpp" 
+       Description="" 
+       Mask="false" 
+       Display="always" 
+       Required="false" />
+    <Config 
+       Type="Port" 
+       Name="FalconPlayer Web UI" 
+       Target="80" 
+       Default="8456" 
+       Mode="tcp" 
+       Description="This is Falcon Player Web UI Port" 
+       Display="always" 
+       Required="true">8456</Config>
+    <Banner></Banner>
+    <WebUI>http://[IP]:[PORT:8456]</WebUI>
+  <Icon>https://falconchristmas.com/images/Site%20LogoTransparent%204%20forum.png</Icon>
+</Container>
